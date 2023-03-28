@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+
+a {
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 700;
+    color: #000000;
+}
+
+body {
+    max-width: 90%;
+    width: 90%;
+    height: 1080px;
+    background: #FFFFFF;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+    width: 90%;
+    margin-top: 3%;
+    margin-left: 10%;
+    align-items: baseline;
+}
+
+.home {
+    width: 191px;
+    height: 40px;
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.search {
+    width: 406px;
+    height: 51px;
+    display: flex;
+    margin-right: 2%;
+
+}
+
+.search button {
+    margin-left: -12%;
+}
+
+.book-search {
+    width: 153px;
+    height: 49px;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 15px;
+    display: flex;
+    text-align: left;
+    color: #979797;
+}
+
+.search input {
+    box-sizing: border-box;
+    width: 406px;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    border-radius: 10px;
+}
+
+.login {
+    width: 73px;
+    height: 30px;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.navbar {
+    width: 67%;
+    height: 51px;
+    background: #FDFDFC;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1.5%;
+    margin-left: 20%;
+}
+
+.navbar a{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: left;
+    color: #000000;
+}
+
+
+
