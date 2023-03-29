@@ -92,7 +92,7 @@ button {
     margin-left: 20%;
 }
 
-.navbar a{
+.navbar a {
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -101,5 +101,81 @@ button {
     color: #000000;
 }
 
+.center {
+    align-items: center;
+    text-align: center;
+    margin-left: 20%;
+}
+.center h2 {
 
+}
 
+.center .carousel-left {
+
+}
+
+.center .carousel {
+    position: relative;
+    width: 1083px;
+    height: 370px;
+    background: #F6F4E2;
+    border-radius: 89px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.carousel .book-description {
+    margin-top: 10%;
+    margin-right: 8%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: justify;
+}
+
+.carousel .book-title-carousel {
+    align-items: center;
+    text-align: center;
+
+}
+
+.carousel .book-carousel {
+    margin-left: 10%;
+}
+
+.carousel-icon {
+    margin-left: 20%;
+    margin-top: 8%;
+}
+
+.carousel-selector {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 3%;
+    margin-left: 40%;
+}
+
+.button-carousel-selector {
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    border:1px solid #cfdcec;
+    overflow:hidden;
+
+    background: #4679BD;
+    box-shadow: 0 0 1px gray;
+}
+
+.button-carousel-selector:hover {
+    background: black;
+}
+
+.button-carousel-selector:active {
+    background: green;
+}
+
+button-carousel-selector:focus  {
+    color: orangered;
+}
