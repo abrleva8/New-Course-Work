@@ -1,0 +1,46 @@
+.center{
+    max-width: 64%;
+    width: 64%;
+    margin-left: 18%;
+    margin-bottom: 5%;
+}
+
+.books_page{
+    display: grid;
+    row-gap: 15%;
+    margin-bottom: 20%;
+}
+
+.books_row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.book{
+    background: #cfbc83;
+    width: 160px;
+    height: 235px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.book img{
+    width: 100%;
+}
+
+.book_author{
+    margin-top: 5%;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.book_title{
+    margin-top: 2.5%;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
