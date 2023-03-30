@@ -1,0 +1,33 @@
+.center{
+    display: table-column;
+    align-items: center;
+}
+button{
+    font-size: 16px;
+}
+
+label{
+    font-size: 16px;
+}
+
+.container_item{
+    margin-top:3%;
+}
+
+.container{
+    display: grid;
+    grid-auto-columns: auto;
+    align-items: center;
+    text-align: left;
+}
+
+.button_group{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.submit_button{
+    margin-top: 5%;
+    font-weight: bold;
+}
