@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="../css/main.css">
 	<title>Книгопоиск</title>
+	<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 <body>
 <div class="top">
@@ -55,14 +56,14 @@
 		<div class="carousel-bg">
 			<div class="carousel-left">
 				<button>
-					<img src="../img/gore_ot_uma_icon.svg" alt="Горе от ума" style="height: 80%">
+					<img id="carousel_img" src="../img/gore_ot_uma_icon.svg" alt="Горе от ума" style="height: 80%">
 				</button>
 			</div>
 			<div class="carousel-right">
 				<div class="book-title-carousel">
-					<h3>Горе от ума</h3>
+					<h3 id="carousel_title">Горе от ума</h3>
 				</div>
-				<div class="book-description">
+				<div id="carousel_desc" class="book-description">
 					«Горе от ума» – шедевр русской литературы, произведение, раздерганное на цитаты и крылатые фразы чуть не от
 					первого до последнего слова.
 					Не потому ли горькая, язвительная и блестящая комедия Грибоедова по-прежнему актуальна и по сей день не сходит
@@ -71,11 +72,11 @@
 			</div>
 		</div>
 		<div class="carousel-selector">
-			<button class="button-carousel-selector">
+			<button id="selector0" class="button-carousel-selector" onclick="set_carousel(0)">
 			</button>
-			<button class="button-carousel-selector">
+			<button id="selector1" class="button-carousel-selector" onclick="set_carousel(1)">
 			</button>
-			<button class="button-carousel-selector">
+			<button id="selector2" class="button-carousel-selector" onclick="set_carousel(2)">
 			</button>
 		</div>
 	</div>
@@ -110,5 +111,6 @@
 	<a href="https://vk.com/abrleva8">Ваш покорный слуга</a>
 	<p>ООО Книгопоиск</p>
 </footer>
+<script src="../js/carousel.js"></script>
 </body>
 </html>
