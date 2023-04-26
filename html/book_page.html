@@ -7,7 +7,7 @@
 	<title>Название книги</title>
 </head>
 
-
+<script src="../js/rate.js"></script>
 <body>
   <div class="top">
     <a href="main.html" class="home">
@@ -60,20 +60,29 @@
         первого до последнего слова. Не потому ли горькая, язвительная и блестящая комедия Грибоедова по-прежнему
         актуальна и по сей день не сходит с лучших театральных сцен нашей страны?</h4>
     </div>
-    <div class="estimate">
-      <p>
-        <i class="star"></i>
-        <i class="star"></i>
-        <i class="star"></i>
-        <i class="star"></i>
-        <i class="star"></i>
-        <i class="star"></i>
-        <i class="star"></i>
-        <i class="star"></i>
-        <i class="star"></i>
-        <i class="star"></i>
-      </p>
+    <div class="rate">
+      <input type="radio" id="star10" name="rate" value="10" onclick="rateClick(this)"/>
+      <label for="star10" title="text">10 stars</label>
+      <input type="radio" id="star9" name="rate" value="9" onclick="rateClick(this)"/>
+      <label for="star9" title="text">9 stars</label>
+      <input type="radio" id="star8" name="rate" value="8" onclick="rateClick(this)"/>
+      <label for="star8" title="text">8 stars</label>
+      <input type="radio" id="star7" name="rate" value="7" onclick="rateClick(this)"/>
+      <label for="star7" title="text">7 stars</label>
+      <input type="radio" id="star6" name="rate" value="6" onclick="rateClick(this)"/>
+      <label for="star6" title="text">6 stars</label>
+      <input type="radio" id="star5" name="rate" value="5" onclick="rateClick(this)"/>
+      <label for="star5" title="text">5 stars</label>
+      <input type="radio" id="star4" name="rate" value="4" onclick="rateClick(this)"/>
+      <label for="star4" title="text">4 stars</label>
+      <input type="radio" id="star3" name="rate" value="3" onclick="rateClick(this)"/>
+      <label for="star3" title="text">3 stars</label>
+      <input type="radio" id="star2" name="rate" value="2" onclick="rateClick(this)"/>
+      <label for="star2" title="text">2 stars</label>
+      <input type="radio" id="star1" name="rate" value="1" onclick="rateClick(this)"/>
+      <label for="star1" title="text">1 star</label>
     </div>
+    <h2 id="rate_text" class="rate_text"> Your rating:&nbsp&nbsp&nbsp&nbsp</h2>
   </div>
 
   <footer>
