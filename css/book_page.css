@@ -9,6 +9,10 @@
     justify-items: center;
 }
 
+#description_book{
+    text-align: justify;
+}
+
 .text-description {
     vertical-align: top;
 }
