@@ -63,27 +63,30 @@
     </div>
     <div class="rate">
       <input type="radio" id="star10" name="rate" value="10" onclick="rateClick(this)"/>
-      <label for="star10" title="text">10 stars</label>
+      <label id="id_rate10" for="star10" title="text">10 stars</label>
       <input type="radio" id="star9" name="rate" value="9" onclick="rateClick(this)"/>
-      <label for="star9" title="text">9 stars</label>
+      <label id="id_rate9" for="star9" title="text">9 stars</label>
       <input type="radio" id="star8" name="rate" value="8" onclick="rateClick(this)"/>
-      <label for="star8" title="text">8 stars</label>
+      <label id="id_rate8" for="star8" title="text">8 stars</label>
       <input type="radio" id="star7" name="rate" value="7" onclick="rateClick(this)"/>
-      <label for="star7" title="text">7 stars</label>
+      <label id="id_rate7" for="star7" title="text">7 stars</label>
       <input type="radio" id="star6" name="rate" value="6" onclick="rateClick(this)"/>
-      <label for="star6" title="text">6 stars</label>
+      <label id="id_rate6" for="star6" title="text">6 stars</label>
       <input type="radio" id="star5" name="rate" value="5" onclick="rateClick(this)"/>
-      <label for="star5" title="text">5 stars</label>
+      <label id="id_rate5" for="star5" title="text">5 stars</label>
       <input type="radio" id="star4" name="rate" value="4" onclick="rateClick(this)"/>
-      <label for="star4" title="text">4 stars</label>
+      <label id="id_rate4" for="star4" title="text">4 stars</label>
       <input type="radio" id="star3" name="rate" value="3" onclick="rateClick(this)"/>
-      <label for="star3" title="text">3 stars</label>
+      <label id="id_rate3" for="star3" title="text">3 stars</label>
       <input type="radio" id="star2" name="rate" value="2" onclick="rateClick(this)"/>
-      <label for="star2" title="text">2 stars</label>
+      <label id="id_rate2" for="star2" title="text">2 stars</label>
       <input type="radio" id="star1" name="rate" value="1" onclick="rateClick(this)"/>
-      <label for="star1" title="text">1 star</label>
+      <label id="id_rate1" for="star1" title="text">1 star</label>
     </div>
-    <h2 id="rate_text" class="rate_text"> Your rating:&nbsp&nbsp&nbsp&nbsp</h2>
+    <div>
+      <h2 id="rate_text" class="rate_text"> Your rating:&nbsp&nbsp&nbsp&nbsp</h2>
+      <button id="delete_button" class="delete_button" onclick="deleteClick(this)">Удалить оценку</button>
+    </div>
   </div>
 
   <footer>

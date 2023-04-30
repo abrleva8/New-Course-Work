@@ -27,6 +27,7 @@
     position:absolute;
     top:-9999px;
 }
+
 .rate:not(:checked) > label {
     float:right;
     width:1em;
@@ -36,6 +37,7 @@
     font-size:30px;
     color:#ccc;
 }
+
 .rate:not(:checked) > label:before {
     content: '★ ';
 }
@@ -54,3 +56,8 @@
     color: #c59b08;
 }
 
+.delete_button {
+    /*background: transparent;*/
+    /*border: none !important;*/
+    font-size:0;
+}
