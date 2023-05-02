@@ -1,24 +1,20 @@
 let rate = 0
-function rateClick(el) {
-    rate = el.value
-    const x = $("#rate_text")
+function set_stars($rate = null) {
+    const rateText = $("#rate_text")
+    rateText.html("Your rating: " + ($rate ?? ""))
     const delete_button = $("#delete_button")
-    x.html("Your rating: " + rate)
-    delete_button.css({'font-size':12})
+    if ($rate !== null)
+        delete_button.css({"display": "block" })
+    else {
+        delete_button.css({"display": "none" })
+        for (let i = 1; i <= rate; i++) {
+            $("#star" + i).prop("checked", false)
+        }
+        rate = 0
+    }
 }
 
-function deleteClick(el) {
-
-    const x = $("#rate_text")
-    const delete_button = $("#delete_button")
-    x.html("Your rating: ")
-    delete_button.css({'font-size':0})
-
-    for (let i = 1; i <= rate; i++) {
-        let right_id = "#star" + i
-        let t = $(right_id)
-        t.prop("checked", false);
-    }
-
-    rate = 0
+function rate_click(el) {
+    rate = el.value
+    set_stars(rate)
 }
