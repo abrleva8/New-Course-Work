@@ -2,6 +2,7 @@
 var car_img = $("#carousel_img")
 var car_title = $("#carousel_title")
 var car_desc = $("#carousel_desc")
+var car_id = $(".id_book")
 
 var titles = ["Горе от ума", "11/22/63", "1984"]
 var images = ["griboedov_gore_ot_uma_icon.svg", "11_22_63.svg", "1984.svg"]
@@ -20,6 +21,7 @@ function set_carousel($id){
     set_selector_colors()
     car_title.text(titles[$id])
     car_img.attr('src', "../img/" + images[$id])
+    car_id.attr('id', ($id + 1))
     car_desc.text(descriptions[$id])
     var selector = $("#selector" + $id)
     selector.attr("style","background: black")
