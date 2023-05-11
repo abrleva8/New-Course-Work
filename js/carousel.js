@@ -20,7 +20,7 @@ function set_carousel($id){
     id_car = $id
     set_selector_colors()
     car_title.text(titles[$id])
-    car_img.attr('src', "../img/" + images[$id])
+    car_img.attr('src', "../img/for_book_page/" + images[$id])
     car_id.attr('id', ($id + 1))
     car_desc.text(descriptions[$id])
     var selector = $("#selector" + $id)
