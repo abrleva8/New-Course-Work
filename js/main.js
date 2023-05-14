@@ -3,3 +3,4 @@ function open_book() {
     localStorage.setItem("current_book", id)
     open("book_page.html", "_self")
 }
+
