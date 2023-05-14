@@ -1,0 +1,26 @@
+<?php
+
+$link = mysqli_connect("localhost",
+    "root",
+    "31August2008",
+    "knigopoisk");
+
+if ($link === false) {
+    print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
+    return;
+} else {
+    $sql = "SELECT book_name, book_description, book_image_source
+            FROM books
+            LIMIT 3";
+    $stmt = $link->prepare($sql);
+    if (mysqli_stmt_execute($stmt)) {
+        mysqli_stmt_bind_result($stmt, $col1, $col2, $col3);
+        while (mysqli_stmt_fetch($stmt)) {
+            printf("%s#%s#%s~", $col1, $col2, $col3);
+        }
+    } else {
+        printf("Ошибка!!!");
+    }
+}
+
+$link->close();

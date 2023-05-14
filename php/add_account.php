@@ -1,6 +1,6 @@
 <?php
 
-//TODO: поменять пароль
+
 $link = mysqli_connect("localhost",
     "root",
     "31August2008",

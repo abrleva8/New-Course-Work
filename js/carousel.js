@@ -4,23 +4,48 @@ var car_title = $("#carousel_title")
 var car_desc = $("#carousel_desc")
 var car_id = $(".id_book")
 
-var titles = ["Горе от ума", "11/22/63", "1984"]
-var images = ["griboedov_gore_ot_uma_icon.svg", "11_22_63.svg", "1984.svg"]
-var descriptions = ["«Горе от ума» – шедевр русской литературы, произведение, раздерганное на цитаты и крылатые фразы чуть не от\n" +
-"\t\t\t\t\tпервого до последнего слова.\n" +
-"\t\t\t\t\tНе потому ли горькая, язвительная и блестящая комедия Грибоедова по-прежнему актуальна и по сей день не сходит\n" +
-"\t\t\t\t\tс лучших театральных сцен нашей страны?",
+var titles = [];
+var images = [];
+var descriptions = [];
 
-    "Убийство президента Кеннеди стало самым трагическим событием американской истории ХХ века. Тайна его до сих пор не раскрыта. Но что, если случится чудо? Если появится возможность отправиться в прошлое и предотвратить катастрофу? Это предстоит выяснить обычному учителю из маленького городка Джейку Эппингу, получившему доступ к временному порталу. Его цель – спасти Кеннеди. Но какова будет цена спасения?",
+$(window).load(function () {
+    get_carousel_data()
+})
 
-    "Своеобразный антипод второй великой антиутопии XX века - \"О дивный новый мир\" Олдоса Хаксли. Что, в сущности, страшнее: доведенное до абсурда \"общество потребления\" - или доведенное до абсолюта \"общество идеи\"? По Оруэллу, нет и не может быть ничего ужаснее тотальной несвободы...\n"]
+function get_carousel_data(){
+    $.ajax({
+        type: "GET",
+        async: false,
+        url: "../php/get_carousel_info.php",
+        data: {id_book: localStorage.getItem("current_book")},
+    })
+        .done(function (data) {
+            if (data === "Ошибка!!!") {
+                alert("Произошла ошибка!")
+            } else {
+                set_lists(data);
+            }
+        });
+}
 
+function set_lists(data, c='~') {
+    titles = []
+    images = []
+    descriptions = []
+    x = data.split(c)
+    x.forEach((el) => {
+        let current_row = el.split('#')
+        titles.push(current_row[0]);
+        descriptions.push(current_row[1]);
+        images.push(current_row[2]);
+    })
+}
 
 function set_carousel($id){
     id_car = $id
     set_selector_colors()
     car_title.text(titles[$id])
-    car_img.attr('src', "../img/for_book_page/" + images[$id])
+    car_img.attr('src', images[$id])
     car_id.attr('id', ($id + 1))
     car_desc.text(descriptions[$id])
     var selector = $("#selector" + $id)
