@@ -55,11 +55,9 @@ function enter_in_account($login, $password){
         data: {login: $login, password: $password}
     })
         .done(function (data) {
-            if (data === "")
-            {
+            if (data === "") {
                 alert("Логин или пароль введен неверно!")
-            }
-            else if (!isNaN(data)) {
+            } else if (!isNaN(data)) {
                 localStorage.setItem("account_id", data)
                 localStorage.setItem("login", $login)
                 open("main.html", "_self")

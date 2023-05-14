@@ -11,11 +11,10 @@ $id = $_GET['id_book'];
 if ($link === false){
     print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
     return;
-}
-else {
+} else {
     $sql = "select book_name, book_description, book_image_source
-    from books
-    where id_book = ?";
+            from books
+            where id_book = ?";
     $stmt = $link->prepare($sql);
     $stmt->bind_param('i', $id);
     if (mysqli_stmt_execute($stmt)) {
@@ -24,8 +23,9 @@ else {
             //TODO: подумать над \n
             printf("%s#%s#%s\n", $col1, $col2, $col3);
         }
+    } else {
+        printf("Ошибка!!!");
     }
-    else printf("Ошибка!!!");
 }
 
 $link->close();

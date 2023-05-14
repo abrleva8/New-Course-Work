@@ -3,7 +3,7 @@
 //TODO: поменять пароль
 $link = mysqli_connect("localhost",
     "root",
-    "04042002Mm!",
+    "31August2008",
     "knigopoisk");
 
 $login = $_GET['login'];
@@ -12,9 +12,8 @@ $password = $_GET['password'];
 if ($link === false){
     print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
     return;
-}
-else {
-    $sql = "select account_id from accounts
+} else {
+    $sql = "select user_id from user
     where login = ? and password = ?";
     $stmt = $link->prepare($sql);
     $stmt->bind_param('ss', $login, $password);
