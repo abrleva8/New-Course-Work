@@ -13,7 +13,7 @@ if ($link === false){
     print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
     return;
 } else {
-    $sql = "insert into user (login, password) values (?, ?)";
+    $sql = "INSERT INTO user (login, password) VALUES (?, ?)";
     $stmt = $link->prepare($sql);
     $stmt->bind_param('ss', $login, $password);
     if($stmt->execute()){
@@ -21,5 +21,6 @@ if ($link === false){
         print $result;
     }
 }
+
 $link->close();
 

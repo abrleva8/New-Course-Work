@@ -9,7 +9,7 @@ if ($link === false) {
     print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
     return;
 } else {
-    $sql = "SELECT DISTINCT id_book, book_name, book_description, book_image_source
+    $sql = "SELECT id_book, book_name, book_description, book_image_source
             FROM books
             ORDER BY RAND()
             LIMIT 3";
