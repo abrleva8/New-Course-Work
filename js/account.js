@@ -65,3 +65,7 @@ function enter_in_account($login, $password){
         });
 }
 
+function exit_acc() {
+    localStorage.clear()
+}
+

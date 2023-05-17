@@ -3,7 +3,7 @@
 //TODO: поменять пароль
 $link = mysqli_connect("localhost",
     "root",
-    "31August2008",
+    "04042002Mm!",
     "knigopoisk");
 
 $login = $_GET['login'];

@@ -6,21 +6,21 @@ $link = mysqli_connect("localhost",
     "04042002Mm!",
     "knigopoisk");
 
-$login = $_POST['login'];
-$password = $_POST['password'];
+$id_book = $_POST['id_book'];
+$id_user = $_POST['id_user'];
 
 if ($link === false){
     print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
     return;
 } else {
-    $sql = "INSERT INTO user (login, password) VALUES (?, ?)";
+    $sql = "delete 
+            from user_books
+            where id_book = ? and id_user = ?";
     $stmt = $link->prepare($sql);
-    $stmt->bind_param('ss', $login, $password);
-    if($stmt->execute()){
-        $result = $link->insert_id;
-        print $result;
+    $stmt ->bind_param("ii", $id_book, $id_user);
+    if (!mysqli_stmt_execute($stmt)) {
+        printf("Ошибка!!!");
     }
 }
 
 $link->close();
-
