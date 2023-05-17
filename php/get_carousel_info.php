@@ -2,7 +2,7 @@
 
 $link = mysqli_connect("localhost",
     "root",
-    "04042002Mm!",
+    "31August2008",
     "knigopoisk");
 
 if ($link === false) {

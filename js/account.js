@@ -2,12 +2,17 @@
 function check_parameters($email, $password) {
     if ($email === ""){
         alert("Введите логин")
+        return false
     }
     if ($password === ""){
         alert("Введите пароль")
+        return false
     }
     if (!validate_email($email))
         alert("Почта некорректная!")
+        return false
+
+    return true
 }
 
 function validate_email($email) {
@@ -24,8 +29,9 @@ $("#enter").click(function () {
 $("#register").click(function () {
     let login = $("#login_user").val()
     let password = $("#password_user").val()
-    check_parameters(login, password)
-    add_account(login, password)
+    if (check_parameters(login, password)) {
+        add_account(login, password)
+    }
 })
 
 function add_account($login, $password){
