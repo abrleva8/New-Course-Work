@@ -1,16 +1,19 @@
 
 function check_parameters($email, $password) {
-    if ($email === ""){
+    if ($email === "") {
         alert("Введите логин")
         return false
     }
-    if ($password === ""){
+
+    if ($password === "") {
         alert("Введите пароль")
         return false
     }
-    if (!validate_email($email))
+
+    if (!validate_email($email)) {
         alert("Почта некорректная!")
         return false
+    }
 
     return true
 }
